@@ -1,5 +1,5 @@
 kind: pipeline
-name: Docker Paperless-ngx 3
+name: Docker Paperless-ngx 
 
 trigger:
   branch:
