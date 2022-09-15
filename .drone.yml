@@ -1,11 +1,11 @@
 kind: pipeline
 name: Docker Paperless-ngx322
 
-trigger:
-  branch:
-    - dev
-  event:
-    - push
+#trigger:
+#  branch:
+#    - dev
+#  event:
+#    - push
 
 steps:
 - name: Push to hub.docker.com
