@@ -6,7 +6,6 @@ trigger:
     - dev
   event:
     - push
-    - pull
 
 steps:
 - name: Push to hub.docker.com
