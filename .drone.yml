@@ -1,0 +1,31 @@
+kind: pipeline
+name: Docker Paperless-ngx
+
+trigger:
+  branch:
+    - dev
+  event:
+    - push
+    - pull
+
+steps:
+- name: Push to hub.docker.com
+  image: plugins/docker
+  settings:
+    username:
+      from_secret: docker_username
+    password:
+      from_secret: docker_password
+    repo: darkobg/paperless-ngx
+    tags: latest
+
+#- name: Push to gitea.dalibor.net
+#  image: plugins/docker
+#  settings:
+#    repo: gitea.dalibor.net/dalibor/paperless-ngx
+#    username:
+#      from_secret: gitea_username
+#    password:
+#      from_secret: gitea_token
+#    registry: gitea.dalibor.net
+#    tags: latest

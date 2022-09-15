@@ -63,6 +63,7 @@ ARG RUNTIME_PACKAGES="\
   gosu \
   icc-profiles-free \
   imagemagick \
+  jq \
   media-types \
   liblept5 \
   libpq5 \
@@ -235,6 +236,7 @@ RUN set -eux \
 
 VOLUME ["/usr/src/paperless/data", \
         "/usr/src/paperless/media", \
+        "/usr/src/paperless/trash", \
         "/usr/src/paperless/consume", \
         "/usr/src/paperless/export"]
 
