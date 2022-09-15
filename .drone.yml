@@ -10,6 +10,8 @@ name: Docker Paperless-ngx322
 steps:
 - name: Push to hub.docker.com
   image: plugins/docker
+  commands:
+    - ./build-docker-image.sh Dockerfile
   settings:
     username:
       from_secret: docker_username
